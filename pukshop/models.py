@@ -10,7 +10,7 @@ class Product(models.Model):
     price = models.DecimalField(decimal_places=2, max_digits=20, default=00.00)
     image = models.ImageField(upload_to="gallery", null=True, blank=True)
     for_sale = models.BooleanField(null=False, default=False)
-    release_date = models.DateField(null=False, auto_now_add=True)
+    release_date = models.DateField(null=False)
     sys_created_date = models.DateTimeField(auto_now_add=True, null=False)
 
     def image_tag(self):
